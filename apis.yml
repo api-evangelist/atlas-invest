@@ -1,23 +1,80 @@
 aid: atlas-invest
+
 name: Atlas Invest
-description: 'Atlas Invest is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Atlas Invest is an AI‑powered bridge lending platform that provides commercial real‑estate bridge loans and private credit solutions. Leveraging proprietary AI, deep industry expertise, and institutional capital, it connects brokers, borrowers, and investors to streamline deal flow, accelerate underwriting, and deliver transparent, fast financing for multifamily and mixed‑use properties across the United States.'
+
 url: https://raw.githubusercontent.com/api-evangelist/atlas-invest/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- FinTech
+- Bridge Lending
+- Real Estate
+- AI
+- Private Credit
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: WellKnown
+  url: well-known/atlas-invest-well-known.yml
+- type: Hosts
+  url: hosts/atlas-invest-hosts.yml
+- type: Vendors
+  url: vendors/atlas-invest-vendors.yml
+- type: DomainSecurity
+  url: security/atlas-invest-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://atlas-invest.co
+- type: Blog
+  url: https://atlas-invest.co/blog
+- type: Documentation
+  url: https://atlas-invest.co/about-us/
+- type: APIReference
+  url: https://atlas-invest.co/about-us/
+
+- type: Support
+  url: https://atlas-invest.co/contact/
+- type: TermsOfService
+  url: https://atlas-invest.co/terms-conditions/
+- type: PrivacyPolicy
+  url: https://atlas-invest.co/privacy-policy/
+- type: Postman
+  url: https://www.postman.com/atlas-invest/workspace/atlas-invest
+- type: GitHubOrganization
+  url: https://github.com/atlas-invest
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL or other machine‑readable contract found on discovered hosts.
+  evidence:
+    - url: https://backoffice.atlas-invest.co/openapi.json
+      status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
